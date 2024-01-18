@@ -5,6 +5,7 @@ from torchvision.transforms import transforms
 from torchvision import models
 import io
 import torch
+from fastapi.middleware.cors import CORSMiddleware
 
 
 # data labels
@@ -1012,6 +1013,21 @@ idx_to_class = {
 # build api to make predictions
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000",  # React app
+    # other origins if needed
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 
 model = models.resnet50(pretrained=True)
 model.eval()
