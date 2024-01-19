@@ -12,7 +12,8 @@ import io
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000",  # React app
+    "http://localhost:3000",
+    'http://172.20.10.2:3000' # React app
     # other origins if needed
 ]
 
@@ -47,7 +48,10 @@ async def predict(file: UploadFile = File(...)):
 
     # decode prediction
     prediction_class = decode_predictions(predictions, top=1)[0][0]
-    return {"Prediction: " + prediction_class[1]}, ("Confidence Score: ", round(prediction_class[2]*100, 2))
+    return {
+    "Prediction": prediction_class[1],
+    "ConfidenceScore": round(prediction_class[2]*100, 2)
+}
 
 # use curl to test:
 # curl.exe -X POST http://127.0.0.1:8000/predict -H "Content-Type: multipart/form-data" -F "file=@C:\Users\HP\Downloads\lion.jfif"
