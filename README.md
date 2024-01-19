@@ -37,7 +37,8 @@ response = requests.post(api_url, files=files)
 # Print the response
 print(response.json())
 ```
-# React App Usage
+# API USAGE (with React)
+
 ![Alt Text](./Screenshot%202024-01-19%20142746.png)
 
 
