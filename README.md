@@ -39,7 +39,12 @@ print(response.json())
 ```
 # API USAGE (with React)
 
-![Alt Text](./Screenshot%202024-01-19%20142746.png)
+![Screenshot 0](./Screenshot%202024-01-19%20142746.png)
+
+![Screenshot 1](./Screenshot%202024-01-19%20142813.png)
+
+![Screenshot 2](./Screenshot%202024-01-19%20142908.png)
+
 
 
  
