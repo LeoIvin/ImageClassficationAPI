@@ -37,6 +37,8 @@ response = requests.post(api_url, files=files)
 # Print the response
 print(response.json())
 ```
+# React App Usage
+![Alt Text](./Screenshot%202024-01-19%20142746.png)
 
 
  
