@@ -9,7 +9,23 @@ from fastapi import UploadFile, File
 import io
 
 
-app = FastAPI()
+description = """
+This FastAPI-based API serves as an image classification endpoint using a pre-trained ResNet50 deep learning model. 
+The API allows users to make predictions by submitting image files, and it responds with the predicted class label and 
+confidence score for the main object in the image. The model is based on the ResNet50 architecture and has 
+been pre-trained on the ImageNet dataset for a wide range of object categories.                
+"""
+
+app = FastAPI(
+    title="Image Classification API",
+    description=description,
+    summary="Identify Various Objects",
+    version='0.0.1',
+    contact={
+        "name": "Irving Amaechi",
+        "email": "Irvingdubem@gmail.com"
+    }
+)
 
 origins = [
     "http://localhost:3000",
