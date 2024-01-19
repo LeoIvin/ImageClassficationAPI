@@ -7,8 +7,8 @@ Ensure you have Python installed on your machine. Install the required Python pa
 `pip install fastapi uvicorn[standard] pillow numpy tensorflow`
 
 3. Run the API:
-Save the provided code in a file (e.g., main.py). Open a terminal and run the following command:
-`uvicorn main:app --reload`
+Save the provided code in a file (e.g., app.py). Open a terminal and run the following command:
+`uvicorn app:app --reload`
 The API will be accessible at `http://127.0.0.1:8000`.
 
 # Usage 
